@@ -1,0 +1,1 @@
+Dashboard project through the Odin Project. Done from scratch without anything but vanilla HTML and CSS (with grid and flex) using a picture of the desired layout as a reference.

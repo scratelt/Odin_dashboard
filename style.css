@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    height: 100vh;
+    width: calc(100vw - 30vw);
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
+.dashboard {
+    background-color: rgb(54, 150, 214);
+    grid-area: 1/1/7/2;
+    display: grid;
+    grid-template-rows: 3fr, repeat(12, 1fr);
+    padding-bottom: 40vh;
+    padding-left: 30px;
+    padding-top: 20px;
+    color: white;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.inputBar {
+    background-color: white;
+    grid-area: 1/2/2/6;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas:
+        "search search search search search bell bell bell"
+        "welcome welcome welcome welcome welcome threeButtons threeButtons threeButtons";
+
+}
+
+/* .welcomeP {
+    font-size: 20px;
+    margin: 0;
+    display: inline-block;
+    padding-right: 10px;
+} */
+
+#search {
+    grid-area: search;
+}
+
+#bell {
+    grid-area: bell;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+#welcome {
+    grid-area: welcome;
+    padding-left: 50px;
+    padding-right: 0;
+    max-width: 500px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas:
+        "welcomeIcon hi-there hi-there hi-there hi-there"
+        "welcomeIcon scratelt scratelt scratelt scratelt"
+    ;
+
+}
+.welcomeIcon {
+    grid-area: welcomeIcon;
+    height: 5em;
+    width: 5em;
+}
+.hi-there {
+    grid-area: hi-there;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    height: 1em;
+}
+.hi-there p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.scratelt {
+    grid-area: scratelt;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+
+#new {
+    grid-area: new;
+}
+
+#upload {
+    grid-area: upload;
+}
+
+#share {
+    grid-area: share;
+}
+
+.threeButtons {
+    grid-area: threeButtons;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+
+button {
+    background: #3498db;
+    background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+    background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+    background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+    background-image: -o-linear-gradient(top, #3498db, #2980b9);
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    width: 100px;
+    height: 40px;
+    padding: 2px 2px 2px 2px;
+    margin-left: 10px;
+}
+
+button:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+}
+
+.projects {
+    background-color: rgb(215, 215, 223);
+    grid-area: 2/2/7/6;
+}
+
+input {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 25px;
+    width: 500px;
+    font-size: 20px;
+    margin-left: 80px;
+    align-self: center;
+    background-color: rgb(194, 190, 190);
+}
+
+.projects {
+    display: grid;
+    grid-template-rows: 1fr repeat(6, 5fr);
+    grid-template-columns: 3fr 3fr 2fr;
+    grid-template-areas:
+        "yourProjects . accounementText"
+        "superCoolProject lessCoolProject announcementsItems"
+        "superCoolProject lessCoolProject announcementsItems"
+        "impossibleApp easyPeasyApp announcementsItems"
+        "impossibleApp easyPeasyApp trending"
+        "adBlocker moneyMaker trending"
+        "adBlocker moneyMaker trending";
+    
+}
+
+#yourProjects {
+    grid-area: yourProjects;
+
+}
+#announcementsText {
+    grid-area: announcementsText;
+}
+#superCoolProject {
+    grid-area: superCoolProject;
+}
+#lessCoolProject {
+    grid-area: lessCoolProject;
+}
+#impossibleApp {
+    grid-area: impossibleApp;
+}
+#easyPeasyApp {
+    grid-area: easyPeasyApp;
+}
+#adBlocker {
+    grid-area: adBlocker;
+}
+#moneyMaker {
+    grid-area: moneyMaker;
+}
+.announcementsItems {
+    grid-area: announcementsItems;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 10px;
+}
+.trending {
+    grid-area: trending;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+.item {
+    background-color: white;
+    border-radius: 10px;
+    margin: 4px 15px 30px 15px;
+    padding: 10px;
+    border-left: 10px solid rgb(233, 187, 38);
+    box-shadow: 10px 10px 5px 0px rgba(121, 116, 116, 0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(121, 116, 116,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(121, 116, 116,0.75);
+
+}
+
+.item2 {
+    background-color: white;
+    border-radius: 10px;
+    margin: 4px 15px 30px 15px;
+    padding: 10px;
+    box-shadow: 10px 10px 5px 0px rgba(121, 116, 116, 0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(121, 116, 116,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(121, 116, 116,0.75);
+
+}
+
+.textItem {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    padding: 10px 10px 0 10px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    margin-left: 5px;
+    
+}
+
+.icon {
+    height: 1em;
+    width: 1em;
+}
+
+.icon2 {
+    height: 1.5em;
+    width: 1.5em;
+}
+
+.projectIcon {
+    height: 1.2em;
+    width: 1.2em;
+    margin-right: 10px;
+    margin-top: 10px;
+    
+}
+.projectIconContainer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.iconContainer {
+    display: grid;
+    align-items: center;
+    
+}
+
+.projectTitle {
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    margin-top: 8px;
+
+}
+
+.announcementTitle {
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    
+}
+
+.announcementParagraph {
+    border-bottom: solid 1px black;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.iconProfile {
+    height: 2em;
+    width: 2em;
+}
